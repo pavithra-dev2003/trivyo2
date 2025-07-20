@@ -30,7 +30,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/springboot-app:${{ github.run_number }} -f "java-app-demo new/javapack/Dockerfile" "java-app-demo new"
+  run: docker build -t ${{ secrets.DOCKER_USERNAME }}/springboot-app:${{ github.run_number }} -f java-app-demo\ new/javapack/Dockerfile java-app-demo\ new
 
       - name: Install Trivy
         run: |
